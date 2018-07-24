@@ -5,6 +5,7 @@ driver:
   region: eu-west-1
   instance_type: t2.medium
   tags:
+    Name: Test-Kitchen-<%= ENV['CODEBUILD_BUILD_ID'] %>
     X-Contact: <%= ENV['CODEBUILD_INITIATOR'] %>
     X-Application: "Test-Kitchen"
     X-Customer: "Test-Kitchen"
