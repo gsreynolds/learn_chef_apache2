@@ -1,6 +1,15 @@
 ---
 driver:
-  name: vagrant
+  name: ec2
+  # aws_ssh_key_id: <%= ENV["AWS_SSH_KEY_ID"] %>
+  region: eu-west-1
+  instance_type: t2.medium
+  tags:
+    X-Contact: <%= ENV['CODEBUILD_INITIATOR'] %>
+    X-Application: "Test-Kitchen"
+    X-Customer: "Test-Kitchen"
+    X-Project: "Test-Kitchen"
+    X-TTL: '4'
 
 provisioner:
   name: chef_zero
