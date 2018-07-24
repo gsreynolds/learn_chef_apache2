@@ -1,0 +1,50 @@
+version: 0.2
+
+# env:
+#   variables:
+#     key: "value"
+#     key: "value"
+#   parameter-store:
+#     key: "value"
+#     key: "value"
+            
+phases:
+  # install:
+  #   commands:
+  #     - command
+  #     - command
+  #   finally:
+  #     - command
+  #     - command
+  pre_build:
+    commands:
+      - chef exec env
+      - chef -v
+    # finally:
+    #   - command
+    #   - command
+  build:
+    commands:
+      - chef exec cookstyle --fail-level fatal
+      - chef exec foodcritic .
+      - chef exec rspec --color --format documentation
+      - chef exec kitchen test --destroy=always --concurrency --color
+    # finally:
+    #   - command
+    #   - command
+  # post_build:
+  #   commands:
+  #     - berks upload
+  #   finally:
+  #     - command
+  #     - command
+# artifacts:
+#   files:
+#     - location
+#     - location
+#   discard-paths: yes
+#   base-directory: location
+# cache:
+#   paths:
+#     - path
+#     - path
