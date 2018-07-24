@@ -1,3 +1,5 @@
 # learn_chef_apache2
 
+![Build Status](https://codebuild.eu-west-1.amazonaws.com/badges?uuid=eyJlbmNyeXB0ZWREYXRhIjoiVzRvUi90eTFVSEY1RjdrOGdJV2hzYVRoQnZlV04wT0NjMDF1VjdTbWladGRSbXBaOTBXMXd6NFRnTEpEQSthejVYb09GdklEYldZSHJiSFo2OWlSYk5BPSIsIml2UGFyYW1ldGVyU3BlYyI6IlU3VVRINVlsWVZZZVAxQTMiLCJtYXRlcmlhbFNldFNlcmlhbCI6MX0%3D&branch=master)
+
 This basic cookbook configures Apache on Ubuntu.
